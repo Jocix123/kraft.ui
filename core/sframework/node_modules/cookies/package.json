@@ -1,0 +1,24 @@
+{
+  "name": "cookies",
+  "version": "0.5.0",
+  "description": "Cookies, optionally signed using Keygrip.",
+  "main": "./lib/cookies",
+  "dependencies": {
+    "keygrip": "~1.0.0"
+  },
+  "devDependencies": {
+    "express": "*",
+    "restify": "*",
+    "supertest": "0",
+    "mocha": "1"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "license": "MIT",
+  "author": "Jed Schmidt <tr@nslator.jp> (http://jed.is)",
+  "repository": "expressjs/cookies",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  }
+}

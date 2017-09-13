@@ -1,0 +1,48 @@
+//
+//  @@script: server.js
+//  @@version: 0.0.0.1
+//  @@description: kraft bootstrapper
+//  @@author: Loouis Low
+//  @@email: studio@dogsbark.net
+//  @@copyright: dogsbark Inc (www.dogsbark.net)
+// ---------------------------------------------
+//
+
+/***
+ ** Constants
+ */
+
+global.__core = __dirname + '/core/';
+
+/***
+ ** Module Dependencies
+ */
+
+var framework = require(__core + 'sframework'),
+  app = framework(),
+  http = require('http'),
+  httpServer = http.Server(app),
+  consoleDetail = require('morgan');
+
+/***
+ ** Renderer
+ */
+
+console.log('[kraft] piping source...');
+app.use(framework.static(__core + '/render'));
+
+app.get('/', function(req, res) {
+  console.log('[kraft] rendering script...');
+  res.sendFile(__core + '/render/app.html');
+});
+
+/***
+ ** Listening IP Port
+ */
+
+console.log('[kraft] server is listening...');
+app.listen(6767);
+
+console.log('[kraft] http://localhost:6767');
+
+app.use(consoleDetail('dev'));
