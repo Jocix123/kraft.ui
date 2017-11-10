@@ -1,44 +1,41 @@
 //
 //  @@script: server.js
-//  @@version: 0.0.0.1
-//  @@description: kraft bootstrapper
-//  @@author: Loouis Low
-//  @@email: studio@dogsbark.net
-//  @@copyright: dogsbark Inc (www.dogsbark.net)
+//  @@version:
+//  @@description: kraft.ui
+//  @@author: Nathan
+//  @@email: nathan@dogsbark.net
+//  @@copyright: dogsbark Inc (dogsbark.net)
 // ---------------------------------------------
 //
 
-/***
- ** Constants
- */
+// paths
 
 var core = __dirname + '/core/';
 var views = __dirname + '/render/';
-var port = process.env.PORT || 6767;
 
-/***
- ** Module Dependencies
- */
+// module dependencies
 
-var framework = require(core + 'sframework'),
-  app = framework(),
-  http = require('http'),
-  httpServer = http.Server(app),
-  consoleDetail = require('morgan'),
-  bodyParser = require('body-parser');
+const framework = require(core + 'sframework');
+const http = require('http');
+const httpServer = http.Server(app);
+const consoleDetail = require('morgan');
+const bodyParser = require('body-parser');
+const openWebBrowser = require('opn');
 
-/***
- ** get request parameters
- */
+// environment
+
+var env = require('./env/config');
+
+// get renderer
+
+var app = framework();
+
+// get api request parameters
 
 app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(bodyParser.json());
-
-/***
- ** Renderer
- */
 
 console.log('[kraft] piping source...');
 app.use(framework.static(views));
@@ -55,11 +52,13 @@ app.use(function(err, req, res, next){
   res.sendFile(views + 'app.html');
 });
 
-/***
- ** Listening IP Port
- */
+// app port
 
-app.listen(port);
+app.listen(env.server_port);
 app.use(consoleDetail('dev'));
-console.log('[kraft] listening at http://localhost:6767');
+console.log('[kraft] listening at http://localhost:' + env.server_port);
+
+// open web browser
+
+openWebBrowser('http://localhost:' + env.server_port);
 

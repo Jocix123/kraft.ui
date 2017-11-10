@@ -1,18 +1,21 @@
 {
-  "name": "kraft",
+  "name": "kraft.ui",
   "description": "Modular UI Designing Tool",
   "contributors": [
     "Nathan <nathan@dogsbark.net>"
   ],
   "license": "MIT",
   "scripts": {
-    "postinstall": "find ./core/* -name package.json -maxdepth 1 -execdir zap install \\;"
+    "start": "node server.js",
+    "postinstall": "find ./core/* -name package.json -maxdepth 1 -execdir npm i \\;"
   },
   "config": {
     "unsafe-perm": true
   },
   "dependencies": {
     "body-parser": "^1.17.2",
-    "morgan": "^1.8.2"
+    "http": "^0.0.0",
+    "morgan": "^1.8.2",
+    "opn": "^5.1.0"
   }
 }

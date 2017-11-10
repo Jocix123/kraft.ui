@@ -1,7 +1,7 @@
 //
-// @@script: init.js
+// @@script: backgrounds.js
 // @@description:
-// @@version: Kraft bootstrapper
+// @@version:
 // @@author: Loouis Low
 // @@copyright: dogsbark Inc
 //
