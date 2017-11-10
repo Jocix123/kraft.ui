@@ -44,7 +44,7 @@ function run_server() {
 
 echo "[kraft] usage: $binary --help"
 
-while test "$#" -gt 0
+while test "$#" -gt 0;
 do
   case "$1" in
     -h|--help)
