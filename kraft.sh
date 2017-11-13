@@ -38,7 +38,7 @@ function node_modules() {
 
 function run_server() {
   echo "[kraft] initialize > sakura server"
-  node core/server.js
+  node server.js
 }
 
 
