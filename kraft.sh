@@ -37,7 +37,7 @@ function node_modules() {
 }
 
 function run_server() {
-  echo "[kraft] initialize > sakura server"
+  echo "[kraft] initialize > app server"
   node server.js
 }
 
@@ -56,23 +56,23 @@ do
       echo "-s, --start         Start server"
       exit 0
     shift;;
-    
+
     -i|--install)
     shift
       install_nodejs
       node_modules
     shift;;
-    
+
     -c|--clean)
     shift
       npm i
       node_modules
     shift;;
-    
+
     -s|--start)
     shift
       run_server
     shift;;
-    
+
   esac
 done
