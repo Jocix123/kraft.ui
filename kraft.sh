@@ -26,13 +26,13 @@ function runas_root() {
   if [ "$(whoami &2> /dev/null)" != "root" ] &&
      [ "$(id -un &2> /dev/null)" != "root" ]
   then
-    echo "$title permission denied"
+    echo -e "$title permission denied"
   exit 1
   fi
 }
 
 function install_nodejs() {
-  echo "$title installing > node.js"
+  echo -e "$title installing > node.js"
   curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
   apt install -y nodejs
   sudo npm i -g n
@@ -40,17 +40,17 @@ function install_nodejs() {
 }
 
 function node_modules() {
-  echo "$title cleaning > node modules"
+  echo -e "$title cleaning > node modules"
   find core/ -name "node_modules" -type d -exec rm -r "{}" \;
 }
 
 function run_server() {
-  echo "$title initialize > app server"
+  echo -e "$title initialize > app server"
   node server.js
 }
 
 
-echo "$title usage: $binary --help"
+echo -e "$title usage: $binary --help"
 
 while test "$#" -gt 0;
 do
