@@ -32,11 +32,16 @@ function runas_root() {
 }
 
 function install_nodejs() {
-  echo -e "$title installing > node.js"
-  curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-  apt install -y nodejs
-  sudo npm i -g n
-  sudo n stable
+  if which node > /dev/null;
+    then
+      echo -e "$title everything is fine. (OK)"
+    else
+      # install iptables package
+      echo -e "$title installing iptables"
+      sudo apt-get --force-yes --yes install default-jdk maven
+      sudo npm i -g n
+      sudo n stable
+  fi
 }
 
 function node_modules() {
@@ -82,6 +87,8 @@ do
     shift
       run_server
     shift;;
+    
+    *) break;;
 
   esac
 done
