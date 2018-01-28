@@ -6,7 +6,8 @@
 // @@copyright: dogsbark Inc
 //
 
-var script = document.createElement("script")
+const script = document.createElement("script")
+
 script.src = "swiftknife.js"
 
 document.body.appendChild(script)
