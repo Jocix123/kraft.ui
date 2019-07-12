@@ -22,6 +22,8 @@ const consoleDetail = require('morgan')
 const bodyParser = require('body-parser')
 const openWebBrowser = require('opn')
 
+log = console.log
+
 // environment
 
 var env = require('./env/config')
@@ -37,16 +39,16 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 
-console.log('[kraft] piping source...');
+log('[kraft] piping source...');
 app.use(framework.static(views))
 
 app.get('/', function(req, res) {
-  console.log('[kraft] rendering script...')
+  log('[kraft] rendering script...')
   res.sendFile(views + 'app.html')
 })
 
-app.use(function(err, req, res, next){
-  if(err){
+app.use(function(err, req, res, next) {
+  if (err) {
     throw err;
   }
   res.sendFile(views + 'app.html');
@@ -56,9 +58,8 @@ app.use(function(err, req, res, next){
 
 app.listen(env.server_port);
 app.use(consoleDetail('dev'));
-console.log('[kraft] listening at http://localhost:' + env.server_port);
+log('[kraft] listening at http://youripaddress:' + env.server_port);
 
 // open web browser
 
-openWebBrowser('http://localhost:' + env.server_port);
-
+//openWebBrowser('http://localhost:' + env.server_port);

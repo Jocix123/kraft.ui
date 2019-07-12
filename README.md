@@ -4,18 +4,18 @@
 
 ## Prerequisites
 
-User `--install` option to install necessary `Nodejs` modules.
+to install necessary `Nodejs` modules,
 
 ```bash
-$ ./kraft.sh --install
+$ npm i
 ```
 
 ## Run Kraft
 
-User `--start` option to fire up the app server.
+to fire up the app server,
 
 ```bash
-$ ./kraft.sh --start
+$ npm start
 ```
 
 ---
