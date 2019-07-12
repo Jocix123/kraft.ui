@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(bodyParser.json())
 
-log('[kraft] piping source...');
+log('[kraft] piping source...')
 app.use(framework.static(views))
 
 app.get('/', function(req, res) {
@@ -51,14 +51,14 @@ app.use(function(err, req, res, next) {
   if (err) {
     throw err;
   }
-  res.sendFile(views + 'app.html');
-});
+  res.sendFile(views + 'app.html')
+})
 
 // app port
 
-app.listen(env.server_port);
-app.use(consoleDetail('dev'));
-log('[kraft] listening at http://youripaddress:' + env.server_port);
+app.listen(env.server_port)
+app.use(consoleDetail('dev'))
+log('[kraft] listening at http://youripaddress:' + env.server_port)
 
 // open web browser
 
