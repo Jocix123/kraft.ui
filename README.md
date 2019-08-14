@@ -1,10 +1,10 @@
-# Kraft.UI
+# kraft.ui
 
 > Modular UI prototyping toolkit
 
 <p align="left">
-  <img src="Screenshot_1.jpeg" height="200">
-  <img src="Screenshot_2.jpeg" height="200">
+  <img src="Screenshot_1.jpeg" height="220">
+  <img src="Screenshot_2.jpeg" height="220">
 </p>
 
 ## _prerequisites
