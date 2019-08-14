@@ -3,8 +3,8 @@
 > Modular UI prototyping toolkit
 
 <p align="left">
-  <img src="Screenshot_1.jpeg" height="300">
-  <img src="Screenshot_1.jpeg" height="300">
+  <img src="Screenshot_1.jpeg" height="250">
+  <img src="Screenshot_2.jpeg" height="250">
 </p>
 
 ## _prerequisites
