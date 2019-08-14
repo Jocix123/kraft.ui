@@ -2,7 +2,7 @@
 
 > Modular UI prototyping toolkit
 
-## Prerequisites
+## _prerequisites
 
 to install necessary `Nodejs` modules,
 
@@ -10,7 +10,7 @@ to install necessary `Nodejs` modules,
 $ npm i
 ```
 
-## Run Kraft
+## _run
 
 to fire up the app server,
 
