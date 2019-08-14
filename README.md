@@ -2,6 +2,11 @@
 
 > Modular UI prototyping toolkit
 
+<p align="left">
+  <img src="Screenshot_1.jpeg" height="300">
+  <img src="Screenshot_1.jpeg" height="300">
+</p>
+
 ## _prerequisites
 
 to install necessary `Nodejs` modules,
