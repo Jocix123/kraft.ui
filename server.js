@@ -1,36 +1,37 @@
-//
-//  @@script: server.js
-//  @@version:
-//  @@description: kraft.ui
-//  @@author: Nathan
-//  @@email: nathan@dogsbark.net
-//  @@copyright: dogsbark Inc (dogsbark.net)
-// ---------------------------------------------
-//
+#!/usr/bin/env node
+
+/**
+ * @file: server.js
+ * @description: main app bootstrapper
+ * @license: MIT
+ * @author: Loouis Low <loouis@gmail.com>
+ * @copyright: Loouis Low (https://github.com/loouislow81/kraft.ui)
+ */
 
 // paths
 
-var core = __dirname + '/core/'
-var views = __dirname + '/render/'
+const core = __dirname + '/core/'
+const views = __dirname + '/render/'
 
 // module dependencies
 
 const framework = require(core + 'sframework')
 const http = require('http')
-const httpServer = http.Server(app);
 const consoleDetail = require('morgan')
 const bodyParser = require('body-parser')
 const openWebBrowser = require('opn')
 
-log = console.log
+// short-hands
+
+const log = console.log
 
 // environment
 
-var env = require('./env/config')
+const env = require('./env/config')
 
 // get renderer
 
-var app = framework()
+const app = framework()
 
 // get api request parameters
 

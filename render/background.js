@@ -1,10 +1,10 @@
-//
-// @@script: backgrounds.js
-// @@description:
-// @@version:
-// @@author: Loouis Low
-// @@copyright: dogsbark Inc
-//
+/**
+ * @file: background.js
+ * @description: app bootstrapper for Chrome OS
+ * @license: MIT
+ * @author: Loouis Low <loouis@gmail.com>
+ * @copyright: Loouis Low (https://github.com/loouislow81/kraft.ui)
+ */
 
 chrome.app.runtime.onLaunched.addListener(function(launchData) {
   chrome.app.window.create('index.html', {
