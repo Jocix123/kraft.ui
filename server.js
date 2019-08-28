@@ -59,8 +59,8 @@ app.use(function(err, req, res, next) {
 
 app.listen(env.server_port)
 app.use(consoleDetail('dev'))
-log('[kraft] listening at http://youripaddress:' + env.server_port)
+log('[kraft] listening at http://0.0.0.0:' + env.server_port)
 
 // open web browser
 
-//openWebBrowser('http://localhost:' + env.server_port);
+openWebBrowser('http://0.0.0.0:' + env.server_port);

@@ -2,3 +2,4 @@ package-lock.json
 .idea
 .c9
 node_modules
+dist
