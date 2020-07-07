@@ -1,4 +1,8 @@
 node_modules
-package-lock.json
 .idea
 .c9
+
+yarn-erorr.log
+yarn.lock
+package-lock.json
+
