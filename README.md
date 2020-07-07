@@ -7,8 +7,8 @@
 An UI prototyping tool for high-fidelity web and mobile app prototypes wireframes. UI components can be very modular.
 
 <p align="left">
-  <img src="Screenshot_1.jpeg" width="420">
-  <img src="Screenshot_2.jpeg" width="420">
+  <img src="Screenshot_1.jpeg" width="auto">
+  <img src="Screenshot_2.jpeg" width="auto">
 </p>
 
 
