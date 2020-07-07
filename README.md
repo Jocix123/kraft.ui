@@ -30,7 +30,7 @@ $ npm start
 
 ## _download
 
-Download the [Community Edition] binary (https://github.com/loouislow81/kraft.ui/releases/tag/4.6.22) for Linux.
+Download the [Community Edition binary] (https://github.com/loouislow81/kraft.ui/releases/tag/4.6.22) for Linux.
 
 ---
 
