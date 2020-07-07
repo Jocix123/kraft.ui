@@ -1,0 +1,24 @@
+{
+  "name": "kraft.ui",
+  "description": "An UI prototyping tool for high-fidelity web and mobile app prototypes wireframes. UI components can be very modular.",
+  "author": "Loouis Low <loouis@dogsbark.net>, <loouis@gmail.com>",
+  "contributors": [
+    "Nathan <nathan@dogsbark.net>"
+  ],
+  "license": "MIT",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "find ./core/* -name package.json -maxdepth 1 -execdir npm i \\;"
+  },
+  "config": {
+    "unsafe-perm": true
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "electron": "^6.0.4",
+    "http": "^0.0.0",
+    "morgan": "^1.8.2",
+    "path": "^0.12.7"
+  }
+}

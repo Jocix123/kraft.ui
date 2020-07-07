@@ -22,10 +22,16 @@ $ sudo npm i -g n
 $ sudo n latest
 ```
 
+## _run
+
+```bash
+$ npm start
+```
+
 ## _download
 
-Download the [Community Edition](https://github.com/loouislow81/kraft.ui/releases/tag/4.6.22) Linux binary.
+Download the [Community Edition] binary (https://github.com/loouislow81/kraft.ui/releases/tag/4.6.22) for Linux.
 
 ---
 
-MIT
+[MIT](https://github.com/loouislow81/kraft.ui/blob/master/LICENSE)
